@@ -24,6 +24,7 @@
         root.returnExports = factory();
   }
 }(this, function () {
+	var document = this.document;
 
     // Just return a value to define the module export.
     // This example returns an object, but the module
@@ -76,7 +77,7 @@
 				}
 			}//( | ) это sp | nbsp.
 		};
-		var a=document,lochash=a.location.pathname.split("/")[1];
+		var a=document,lochash=a && a.location.pathname.split("/")[1];
 		var typobegin,typoend;
 		/** Инициализация **/
 		function init(){
@@ -108,7 +109,7 @@
 			}
 		};
 		/** Изменение конфигурации **/
-		window.changeTypoConf=function(NewTypo){
+		function changeTypoConf(NewTypo){
 			off=NewTypo.off;
 			TYPO.language=NewTypo.language;
 			TYPO.type=NewTypo.type;
@@ -655,5 +656,7 @@
 				};
 			}
 		}
+
+		return runTypograf;
 	}
 }));
