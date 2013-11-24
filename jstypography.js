@@ -21,7 +21,7 @@
         module.exports = factory();
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory();
+        root.jstypograph = factory();
   }
 }(this, function () {
 	var document = this.document;
