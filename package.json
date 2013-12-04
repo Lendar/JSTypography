@@ -1,5 +1,6 @@
 {
   "name": "JSTypography",
   "version": "2.2.5",
-  "description": "The Javascript Typography Correcter"
+  "description": "The Javascript Typography Correcter",
+  "main": "jstypography.js"
 }
